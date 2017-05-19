@@ -60,12 +60,12 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. How I performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform is in the sixth code cell of the IPython notebook. I chose the hardcode the source and destination points in the following manner:
 
 ```python
-offset = 100
+offset = 200
 
-src = np.float32([[585, 445], [695, 445], [1130, 675], [150, 675]])  
+src = np.float32([[590, 445], [690, 445], [1050, 675], [230, 675]])  
 
 dst = np.float32([[offset, 0], [img_size[0] - offset, 0], [img_size[0] - offset, img_size[1]], [offset, img_size[1]]])
 
@@ -98,3 +98,11 @@ I implemented this step in the eighth cell. Here is an example of my result on a
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 Here's a [link to my video result](./project_video_output.mp4)
+
+---
+
+### Discussion
+
+#### Briefly discuss any problems I faced of this project.
+
+My pipeline often fail when the lanes under varied illumination color shades. After I fine tune the offset and the source points when doing perspective transformation, the output has a better result.
