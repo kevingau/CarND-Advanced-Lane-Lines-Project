@@ -90,11 +90,3 @@ I implemented this step in the eighth cell. Here is an example of my result on a
 ### Pipeline (video)
 
 #### Here's a link to my [video result](./project_video_output.mp4)
-
----
-
-### Discussion
-
-#### Briefly discuss any problems I faced of this project.
-
-My pipeline often fail when the lanes under varied illumination color shades. After I fine tune the offset and the source points when doing perspective transformation, the output has a better result.
