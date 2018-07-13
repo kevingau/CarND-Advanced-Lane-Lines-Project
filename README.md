@@ -27,7 +27,7 @@
 
 ### Camera Calibration
 
-#### 1. How I computed the camera matrix and distortion coefficients.
+#### 1. Computed the camera matrix and distortion coefficients.
 
 The code for this step is contained in the second code cell of the IPython notebook located in [Advanced-Lane-Lines.ipynb](./Advanced-Lane-Lines.ipynb).
 
@@ -46,13 +46,13 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 Apply distortion correction to the original image based on the camera calibration matrix and the distortion factor.
 ![alt text][image2]
 
-#### 2. How I used color transforms, gradients or other methods to create a thresholded binary image.
+#### 2. Used color transforms, gradients or other methods to create a thresholded binary image.
 
 I used a combination of color and gradient thresholds to generate a binary image in the fourth cell. Here's an example of my output for this step.
 
 ![alt text][image3]
 
-#### 3. How I performed a perspective transform and provide an example of a transformed image.
+#### 3. Performed a perspective transform and provide an example of a transformed image.
 
 The code for my perspective transform is in the sixth code cell of the IPython notebook. I chose the hardcode the source and destination points in the following manner:
 
@@ -69,13 +69,13 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ![alt text][image4]
 
-#### 4. How I identified lane-line pixels and fit their positions with a polynomial?
+#### 4. Identified lane-line pixels and fit their positions.
 
 The lane boundary can be found by fitting to a second order polynomial after separating the left and right lane line pixels. Here is an example of my result on a test image:
 
 ![alt text][image5]
 
-#### 5. How I calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+#### 5. Calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in the seventh cell.
 
